@@ -18,5 +18,5 @@ class MailThread(models.AbstractModel):
             _logger.info("_notify_get_recipients: fetchmail_no_follower_notification due to fetchmail_cron_running.")
             return []
         else:
-            _logger.info("_notify_get_recipients: super()")
+            _logger.info("_notify_get_recipients: context = ", str(self.env.context))
             return super()._notify_get_recipients(message, msg_vals, **kwargs)
