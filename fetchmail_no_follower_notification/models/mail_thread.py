@@ -22,7 +22,7 @@ class MailThread(models.AbstractModel):
             if request and hasattr(request, 'httprequest'):
                 _logger.warning("if request and hasattr httprequest and request.httprequest")
                 if request and hasattr(request, 'httprequest') and request.httprequest:
-            _logger.warning("request.httprequest.headers: " + str(request.httprequest.headers))
+                    _logger.warning("request.httprequest.headers: " + str(request.httprequest.headers))
         # fetchmail_cron_running is not reliable, but default_fetchmail_server_id should be
         if self.env.context.get("default_fetchmail_server_id"):
             _logger.warning("_notify_get_recipients: fetchmail_no_follower_notification due to fetchmail_cron_running.")
