@@ -17,9 +17,20 @@ class MailThread(models.AbstractModel):
         # fetchmail_cron_running is not reliable, but default_fetchmail_server_id should be
         if self.env.context.get("default_fetchmail_server_id"):
             _logger.warning("HENRIK: _notify_get_recipients: fetchmail_no_follower_notification due to fetchmail_cron_running.")
+            _logger.warning("Stack trace for _notify_get_recipients:")
+            _logger.warning(traceback.format_stack())
             return []
         else:
             _logger.warning("HENRIK: _notify_get_recipients: context = " + str(self.env.context))
             _logger.warning("Stack trace for _notify_get_recipients:")
             _logger.warning(traceback.format_stack())
             return super()._notify_get_recipients(message, msg_vals, **kwargs)
+
+    def message_update(self, msg_dict, update_vals=None):
+        """
+        Update the message with the given values.
+        """
+        _logger.warning("HENRIK: message_update: context = " + str(self.env.context))
+        _logger.warning("Stack trace for message_update:")
+        _logger.warning(traceback.format_stack())
+        return super().message_update(msg_dict, update_vals=update_vals)
