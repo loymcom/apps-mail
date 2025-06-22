@@ -15,8 +15,13 @@ class MailThread(models.AbstractModel):
         """
         Do not notify followers if the context indicates that the fetchmail cron is running.
         """
-        if request and hasattr(request, 'httprequest') and request.httprequest:
+        _logger.warning("if request")
+        if request:
             _logger.warning("request.params: " + str(request.params))
+            _logger.warning("if request and hasattr httprequest")
+            if request and hasattr(request, 'httprequest'):
+                _logger.warning("if request and hasattr httprequest and request.httprequest")
+                if request and hasattr(request, 'httprequest') and request.httprequest:
             _logger.warning("request.httprequest.headers: " + str(request.httprequest.headers))
         # fetchmail_cron_running is not reliable, but default_fetchmail_server_id should be
         if self.env.context.get("default_fetchmail_server_id"):
