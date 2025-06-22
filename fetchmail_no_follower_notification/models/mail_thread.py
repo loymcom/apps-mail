@@ -1,4 +1,5 @@
 import logging
+import traceback
 
 from odoo import models
 
@@ -19,4 +20,6 @@ class MailThread(models.AbstractModel):
             return []
         else:
             _logger.warning("HENRIK: _notify_get_recipients: context = " + str(self.env.context))
+            _logger.warning("Stack trace for _notify_get_recipients:")
+            _logger.warning(traceback.format_stack())
             return super()._notify_get_recipients(message, msg_vals, **kwargs)
