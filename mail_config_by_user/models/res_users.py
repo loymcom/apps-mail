@@ -11,7 +11,9 @@ class ResUsers(models.Model):
         """
         self.ensure_one()
         email = self.login
-        mail_out_server = self.env["ir.mail_server"].search([("smtp_user", "=", email)])
+        mail_out_server = self.env["ir.mail_server"].search(
+            [("from_filter", "=", email)]
+        )
         if not mail_out_server:
             Config = self.env["ir.config_parameter"].sudo()
             module = "mail_config_by_user"
