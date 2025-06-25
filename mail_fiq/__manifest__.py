@@ -9,8 +9,8 @@
     "depends": [
 
         # OCA
-        "mail_composer_cc_bcc", # https://github.com/norlinhenrik/oca-mail/tree/18.0-fix-mail_mail-email_to
-        "mail_optional_follower_notification", # https://github.com/OCA/mail/pull/56
+        "mail_composer_cc_bcc", # git@github.com:norlinhenrik/oca-mail/tree/18.0-fix-mail_mail-email_to ### beta/mail
+        "mail_optional_follower_notification", # git@github.com:odoonz/mail.git ### beta/.mail_optional_follower_notification
         "mail_quoted_reply",
         "mail_tracking",
 
