@@ -9,8 +9,15 @@
     "depends": [
 
         # OCA
-        "mail_composer_cc_bcc", # git@github.com:norlinhenrik/oca-mail/tree/18.0-fix-mail_mail-email_to ### beta/mail
-        "mail_optional_follower_notification", # git@github.com:odoonz/mail.git ### beta/.mail_optional_follower_notification
+        "mail_composer_cc_bcc", # git@github.com:norlinhenrik/oca-mail.git      ### 18.0-fix-mail_mail-email_to                  ### beta/mail
+        "mail_optional_follower_notification", # git@github.com:odoonz/mail.git ### 18.0-mig-mail_optional_follower_notification ### beta/.mail_optional_follower_notification
+            # shell
+            #   cd src/user/beta
+            #   git checkout Staging
+            #   ln -s ./.mail_optional_follower_notification/mail_optional_follower_notification mail_optional_follower_notification
+            #   git add mail_optional_follower_notification
+            #   git commit -am "link mail_optional_follower_notification"
+            #   git push -u origin Staging
         "mail_quoted_reply",
         "mail_tracking",
 
