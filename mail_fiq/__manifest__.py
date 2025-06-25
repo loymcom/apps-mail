@@ -6,7 +6,15 @@
     "website": "https://fiq.no",
     "version": "18.0.1.0.0",
     "license": "AGPL-3",
+    "data": [
+        "data/ir_config_parameter_data.xml",
+        "security/mail_message_security.xml",
+        "views/res_users_views.xml",
+    ],
     "depends": [
+        # Odoo
+        "mail",
+        "microsoft_outlook",
 
         # OCA
         "mail_composer_cc_bcc", # git@github.com:norlinhenrik/oca-mail.git      ### 18.0-fix-mail_mail-email_to                  ### beta/mail
@@ -22,15 +30,14 @@
         "mail_tracking",
 
         # Loym/FIQ
+        "mail_config_by_user",
         "mail_force_email_notification_compose",
         "mail_message_security",
         "mail_never_autofollow", # consider mail_optional_autofollow https://github.com/OCA/mail/pull/29
 
         # Wishlist
+        # - mail_message_security: Do not forward emails from the Odoo gateway
         # - mail_quoted_reply_all
         # - User setting: Handle important notifications in Email, otherwise in Odoo
-    ],
-    "data": [
-        "security/mail_message_security.xml",
     ],
 }
