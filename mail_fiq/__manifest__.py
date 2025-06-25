@@ -9,14 +9,15 @@
     "depends": [
 
         # OCA
-        "mail_composer_cc_bcc",
-        "mail_optional_follower_notification",
+        "mail_composer_cc_bcc", # https://github.com/norlinhenrik/oca-mail/tree/18.0-fix-mail_mail-email_to
+        "mail_optional_follower_notification", # https://github.com/OCA/mail/pull/56
         "mail_quoted_reply",
         "mail_tracking",
 
         # Loym/FIQ
         "mail_force_email_notification_compose",
         "mail_message_security",
+        "mail_never_autofollow", # consider mail_optional_autofollow https://github.com/OCA/mail/pull/29
 
         # Wishlist
         # - mail_quoted_reply_all
