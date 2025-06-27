@@ -39,5 +39,8 @@
         # - mail_message_security: Do not forward emails from the Odoo gateway
         # - mail_quoted_reply_all
         # - User setting: Handle important notifications in Email, otherwise in Odoo
+
+        # Consider
+        # - https://github.com/OCA/social/tree/17.0/mail_disable_follower_notification
     ],
 }
