@@ -6,7 +6,7 @@
         <field name="domain_force">
             ['|', ('author_id.user_ids.id', '=', user.id), ('partner_ids.user_ids.id', '=', user.id)]
         </field>
-        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="groups" eval="[(4, ref('base.group_portal'))]"/>
         <field name="perm_read" eval="True"/>
         <field name="perm_write" eval="True"/>
         <field name="perm_create" eval="False"/>
