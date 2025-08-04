@@ -1,2 +1,0 @@
-- Based on mail_optional_autofollow by ACSONE SA/NV
-- Henrik Norlin
